@@ -10,7 +10,9 @@ class TitleScene extends Phaser.Scene{
 		this.load.image("ship3","assets/ship3.png");
 		this.load.image("ship4","assets/ship4.png");
 		this.load.image("Turret1","assets/Turret.png");
-		this.load.image("Rupee","assets/Rupee.png");
+        this.load.image("Rupee", "assets/Rupee.png");
+        this.load.image("bridge", "assets/bridge.png");
+        this.load.image("PortraitBorder", "assets/PortraitBorder.png");
 		//Experimental Code here too
 		// Load palette template.
 		this.load.image('link-palette', 'assets/link-palette.png');

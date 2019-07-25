@@ -19,28 +19,17 @@
 		this.gunlist=this.add.group();
 		this.background=this.add.image(0,0,"background");
 		this.background.setOrigin(0,0);
-		this.background.setScale(2);
+		this.background.setScale(3);
 		//this.add.text(20,20,"Let the battle begin!",{font:"25px Arial",fill:"yellow"});
 		var player=new Scout(this,0,100,0,this.gunlist);//Scene,x,y,side,weaponlist
 		var player2=new Scout(this,0,250,0,this.gunlist);//Scene,x,y,side,weaponlist
 		var player3=new Scout(this,0,500,0,this.gunlist);//Scene,x,y,side,weaponlist
 		var enemy=new Scout(this,800,100,1,this.gunlist);//Scene,x,y,side,weaponlist
 		var enemy2=new Scout(this,800,250,1,this.gunlist);//Scene,x,y,side,weaponlist
-		var enemy3=new Scout(this,800,500,1,this.gunlist);//Scene,x,y,side,weaponlist
+        var enemy3 = new Scout(this, 800, 500, 1, this.gunlist);//Scene,x,y,side,weaponlist
+        var portrait = new Portrait(this, 100, 550);
 		
 		//damage,firingrate,minRange,maxRange,damageType,parentShip,sprite,launchPower,scene,xoffset,yoffset
-		enemy.setScale(2);
-		player.setScale(2);
-		enemy2.setScale(2);
-		player2.setScale(2);
-		enemy3.setScale(2);
-		player3.setScale(2);
-		player.setInteractive();
-		enemy.setInteractive();
-		player2.setInteractive();
-		enemy2.setInteractive();
-		player3.setInteractive();
-		enemy3.setInteractive();
 		this.input.on('gameobjectdown',this.startBattle,this);
 		this.shiplistAllies.add(player);
 		this.shiplistEnemies.add(enemy);

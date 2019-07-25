@@ -16,7 +16,9 @@ class Scout extends ship{
 			side);//Which side the ship fights for
 		this.InitializeWeapons(weaponlist);
 		this.pickRandomPallet();
-		this.anims.play('link-'+this.Pallet+'-walk-down');
+        this.anims.play('link-' + this.Pallet + '-walk-down');
+        this.setScale(2);
+        this.setInteractive();
 	}
 	InitializeWeapons(weaponlist){
 		for(var i=0;i<this.TurretPositionsX.length;i++){
